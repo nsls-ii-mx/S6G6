@@ -1217,7 +1217,7 @@ static double S6Dist_pass(double gvec1[6], double gvec2[6], double dist) {
       >= 9*(gvec2(i))^2+7*(gvec1[i]-gvec2[i])^2
 */
     {
-      double norm1, norm2, dist1[NS6BND], dist2[NS6BND];
+      double dist1[NS6BND], dist2[NS6BND];
       int unred1[NS6BND], unred2[NS6BND];
       double mv1[NS6BND][6], mv2[NS6BND][6];
       int ii;
