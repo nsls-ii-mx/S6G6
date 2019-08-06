@@ -1176,8 +1176,8 @@ static double S6Dist_pass(double gvec1[6], double gvec2[6], double dist) {
 		  jx1 = k / ngood2;
 		  jx2 = k % ngood2;
 		  if (dists1[iord1[jx1]] < maxdist && dists2[iord2[jx2]] < maxdist) {
-			  distgather2[jx1][jx2] = S6Dist_2bds_rev(gvec1, gvec2, pgs1[iord1[jx1]], mpgs1[iord1[jx1]], pgs2[iord1[jx1]], mpgs2[iord1[jx1]], iord1[jx1],
-				  pgs2[iord2[jx2]], mpgs2[iord2[jx2]], pgs1[iord2[jx2]], mpgs1[iord2[jx2]], iord2[jx2], distgather2[jx1][jx2]);
+			  distsgather2[jx1][jx2] = S6Dist_2bds_rev(gvec1, gvec2, pgs1[iord1[jx1]], mpgs1[iord1[jx1]], pgs2[iord1[jx1]], mpgs2[iord1[jx1]], iord1[jx1],
+				  pgs2[iord2[jx2]], mpgs2[iord2[jx2]], pgs1[iord2[jx2]], mpgs1[iord2[jx2]], iord2[jx2], distsgather2[jx1][jx2]);
 		  }
 	  }
 #endif
@@ -1186,8 +1186,8 @@ static double S6Dist_pass(double gvec1[6], double gvec2[6], double dist) {
 	  for (jx1 = 0; jx1 < ngood1; jx1++) {
 		  for (jx2 = 0; jx2 < ngood2; jx2++) {
 			  if (dists1[iord1[jx1]] < maxdist && dists2[iord2[jx2]] < maxdist) {
-				  distgather2[jx1][jx2] = S6Dist_2bds_rev(gvec1, gvec2, pgs1[iord1[jx1]], mpgs1[iord1[jx1]], pgs2[iord1[jx1]], mpgs2[iord1[jx1]], iord1[jx1],
-					  pgs2[iord2[jx2]], mpgs2[iord2[jx2]], pgs1[iord2[jx2]], mpgs1[iord2[jx2]], iord2[jx2], distgather2[jx1][jx2]);
+				  distsgather2[jx1][jx2] = S6Dist_2bds_rev(gvec1, gvec2, pgs1[iord1[jx1]], mpgs1[iord1[jx1]], pgs2[iord1[jx1]], mpgs2[iord1[jx1]], iord1[jx1],
+					  pgs2[iord2[jx2]], mpgs2[iord2[jx2]], pgs1[iord2[jx2]], mpgs1[iord2[jx2]], iord2[jx2], distsgather2[jx1][jx2]);
 			  }
 		  }
 	  }
