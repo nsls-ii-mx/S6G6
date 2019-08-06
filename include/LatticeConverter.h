@@ -1,5 +1,5 @@
 #ifndef LATTICECONVERTER_H
-#define LATTICECONVERERT_H
+#define LATTICECONVERTER_H
 
 #include "LRL_Cell.h"
 
