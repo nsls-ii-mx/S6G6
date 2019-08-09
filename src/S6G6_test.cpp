@@ -9,6 +9,7 @@
 #include "NCDist.h"
 #include "S6.h"
 #include "CS6Dist.h"
+#include <S6Dist.h>
 
 
 std::string Letters( void ) {
@@ -49,6 +50,8 @@ int main()
 
    const std::vector<S6> vLat = GetInputSellingReducedVectors( input );
 
+   S6Dist s6dist;
+
    for (size_t lat = 0; lat < vLat.size( ); ++lat) {
       if (vLat[lat].IsValid( )) {
          const LRL_Cell cell1( vLat[lat] );
@@ -62,7 +65,8 @@ int main()
                std::cout << i << "  " << cell2 << std::endl;
                std::cout << lat << "  " << a << std::endl;
                std::cout << i << "  " << b << std::endl;
-               std::cout << lat << "  " << i << "  " << CS6Dist( a.data( ), b.data( ) ) << std::endl;
+               std::cout << "CS6Dist = " << CS6Dist( a.data( ), b.data( ) ) << std::endl;
+			   std::cout << "S6Dist = " << s6dist.DistanceBetween(a, b) << std::endl;
                std::cout << "Angstrom distance  " << 0.1*sqrt( CS6Dist( a.data( ), b.data( ) ) );
             }
          }
